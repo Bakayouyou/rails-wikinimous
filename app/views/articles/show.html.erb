@@ -1,0 +1,13 @@
+<div>
+<h2><%= @article.title %></h2>
+
+<%= link_to edit_article_path, class: 'nav-btn' do %>
+    <i class="fa-regular fa-pen-to-square"></i>
+<% end %>
+
+<%= link_to article_path(@article), class: 'nav-btn', data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+    <i class="fa-solid fa-trash"></i>
+<% end %>
+
+</div>
+<h2><%= @article.content %></h2>
